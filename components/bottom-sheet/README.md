@@ -34,11 +34,11 @@ import { PropertyBottomSheet } from "@/components/bottom-sheet/property-bottom-s
 
 ### Props
 
-| Prop       | Type         | Required | Mô tả                                                             |
-| ---------- | ------------ | -------- | ----------------------------------------------------------------- |
-| `visible`  | `boolean`    | ✅       | Trạng thái hiển thị của bottom sheet                              |
-| `onClose`  | `() => void` | ✅       | Callback khi bottom sheet cần đóng (kéo xuống hoặc vuốt đủ nhanh) |
-| `children` | `ReactNode`  | ❌       | Nội dung bên trong bottom sheet                                   |
+| Prop | Type | Required | Mô tả |
+|------|------|----------|-------|
+| `visible` | `boolean` | ✅ | Trạng thái hiển thị của bottom sheet |
+| `onClose` | `() => void` | ✅ | Callback khi bottom sheet cần đóng (kéo xuống hoặc vuốt đủ nhanh) |
+| `children` | `ReactNode` | ❌ | Nội dung bên trong bottom sheet |
 
 ## Ví dụ sử dụng
 
@@ -60,9 +60,7 @@ export function PropertyCard() {
       </Pressable>
 
       <PropertyBottomSheet visible={isOpen} onClose={() => setIsOpen(false)}>
-        <Text style={{ fontSize: 18, fontWeight: "600" }}>
-          Tên bất động sản
-        </Text>
+        <Text style={{ fontSize: 18, fontWeight: "600" }}>Tên bất động sản</Text>
         <Text>Địa chỉ: Quận 1, TP.HCM</Text>
         <Text>Giá: 5 tỷ VNĐ</Text>
       </PropertyBottomSheet>
